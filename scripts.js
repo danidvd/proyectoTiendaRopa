@@ -85,7 +85,7 @@ function renderProducts(arr){
     
         const productInfoFigure = document.createElement("figure");
         const productImgCart = document.createElement("img");
-        productImgCart.setAttribute("src","./icono/anadir-a-la-cesta.png");
+        productImgCart.setAttribute("src","./icons/anadir-a-la-cesta.png");
     
         productInfoFigure.appendChild(productImgCart);
     
