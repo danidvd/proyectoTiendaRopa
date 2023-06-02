@@ -96,10 +96,11 @@ function renderProducts(arr){
         productCard.appendChild(productInfo);
     
         cardsContainer.appendChild(productCard)
-    }
-}
+    };
+};
 
 renderProducts(productList);
+
 
 
 
