@@ -51,21 +51,21 @@
             </section>
             <section class="listaApoyo">
                 <ul>
-                    <li>
+                    <li class="suscripcion">
                         <a href="/">Suscribete</a>
                     </li>
-                    <li>
+                    <li class="buscar">
                         <a href="/"><img src="./icons/busqueda.png" alt=""></a>
                     </li>
                     <li class="navbar-email">
                        <img src="./icons/usuario.png" alt="usuario">
                     </li>
-                    <li class="navbar-shopping-cart">
-                        <a href="/"><img src="./icons/anadir-a-la-cesta.png" alt=""></a>
-                        <div id="count">0</div>
-                    </li>
                 </ul>
             </section>
+            <li class="navbar-shopping-cart">
+                <img src="./icons/anadir-a-la-cesta.png" alt="">
+                <div id="count">0</div>
+            </li>
         </div>
         <!--Aqui va el Menu de usuario-->
         <div class="desktop-menu inactive">
@@ -119,6 +119,53 @@
           </div>
     </header>
     <main id="">
+        <aside class="product-detail inactive">
+            <div class="title-container">
+              <img src="./icons/flechita.svg" alt="arrow">
+              <p class="title">My order</p>
+            </div>
+        
+            <div class="my-order-content">
+              <div class="shopping-cart">
+                <figure>
+                  <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                </figure>
+                <p>Bike</p>
+                <p>$30,00</p>
+                <img src="./icons/icon_close.png" alt="close">
+              </div>
+        
+              <div class="shopping-cart">
+                <figure>
+                  <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                </figure>
+                <p>Bike</p>
+                <p>$30,00</p>
+                <img src="./icons/icon_close.png" alt="close">
+              </div>
+        
+              <div class="shopping-cart">
+                <figure>
+                  <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                </figure>
+                <p>Bike</p>
+                <p>$30,00</p>
+                <img src="./icons/icon_close.png" alt="close">
+              </div>
+        
+              <div class="order">
+                <p>
+                  <span>Total</span>
+                </p>
+                <p>$560.00</p>
+              </div>
+        
+              <button class="primary-button">
+                Checkout
+              </button>
+            </div>
+          </div>
+          </aside>
         <section class="main-container">
             <div class="cards-container">
                     <!-- <div class="product-card">
@@ -135,6 +182,7 @@
                     </div> -->
             </div>
         </section>
+       
     </main>
     <footer id=""></footer>
     <script src="./scripts.js"></script>
