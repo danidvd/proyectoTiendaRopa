@@ -1,6 +1,7 @@
 
 function openProductDetailAside(){
     shoppingCartContainer.classList.add("inactive");
+    desktopMenu.classList.add("inactive");
     productDetailContainer.classList.remove("inactive");
 }
 

@@ -443,7 +443,7 @@ aside {
     padding: 12px;
     border-radius: 50%;
   }
-  .product-detail-close:hover {
+  #productDetail -close:hover {
     cursor: pointer;
   }
   #productDetail > img:nth-child(2) {
@@ -452,35 +452,40 @@ aside {
     object-fit: cover;
     border-radius: 0 0 20px 20px;
   }
+  #productDetail div img {
+    margin-left: -9px;
+    margin-top: -9px;
+  }
+
   #productDetail .product-info {
     margin: 24px 24px 0 24px;
   }
   #productDetail .product-info p:nth-child(1) {
     font-weight: bold;
-    font-size: var(--md);
+    font-size: 1rem;
     margin-top: 0;
     margin-bottom: 4px;
   }
   #productDetail .product-info p:nth-child(2) {
-    color: var(--very-light-pink);
+    color: black;
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 36px;
   }
   #productDetail .product-info p:nth-child(3) {
-    color: var(--very-light-pink);
-    font-size: var(--sm);
+    color: black;
+    font-size: 1rem;
     margin-top: 0;
     margin-bottom: 36px;
   }
   .primary-button {
-    background-color: var(--hospital-green);
+    background-color: black;
     border-radius: 8px;
     border: none;
-    color: var(--white);
+    color: white;
     width: 100%;
     cursor: pointer;
-    font-size: var(--md);
+    font-size: 1rem;
     font-weight: bold;
     height: 50px;
   }
