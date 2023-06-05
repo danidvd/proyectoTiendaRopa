@@ -1,6 +1,4 @@
 
-const cardsContainer= document.querySelector(".cards-container");
-
 function openProductDetailAside(){
     shoppingCartContainer.classList.add("inactive");
     productDetailContainer.classList.remove("inactive");
@@ -58,23 +56,25 @@ productList.push({
     image: "./productos/Pantalon sin resorte en bota.JPG",
 });
 
+const cardsContainer= document.querySelector(".cards-container");
+
 function renderProducts(arr){
     for (product of arr) {
+        // Crear Elemento DIV //
         const productCard = document.createElement("div");
+        // Agregar Class a DIV //
         productCard.classList.add("product-card");
-    
+        // Crear etiqueta img //
         const productImg = document.createElement("img");
-        productImg.setAttribute("src",product.image);
+        productImg.setAttribute("src",product.image);// Set atribute modiica propiedad para el caso SRC //
         productImg.addEventListener("click",openProductDetailAside);
     
         const productInfo = document.createElement("div");
         productInfo.classList.add("product-info");
     
         const productInfoDiv = document.createElement("div");
-
     
-        const productPrice = document.createElement("div");
-
+        const productPrice = document.createElement("p");
         productPrice.innerText = "$ " + product.price;
     
         const productName = document.createElement("p");
@@ -88,14 +88,12 @@ function renderProducts(arr){
         productImgCart.setAttribute("src","./icons/anadir-a-la-cesta.png");
     
         productInfoFigure.appendChild(productImgCart);
-    
         productInfo.appendChild(productInfoDiv);
         productInfo.appendChild(productInfoFigure);
-    
         productCard.appendChild(productImg);
         productCard.appendChild(productInfo);
-    
         cardsContainer.appendChild(productCard)
+
     };
 };
 

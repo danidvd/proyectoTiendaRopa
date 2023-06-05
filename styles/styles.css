@@ -212,74 +212,6 @@ li{
     color: var(--very-light-pink);
 }
 
-  /* DETALLES DE PROCUTO */
-
-#productDetail-close {
-    background: var(--white);
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    z-index: 2;
-    padding: 12px;
-    border-radius: 50%;
-}
-
-#productDetail-close:hover {
-    cursor: pointer;
-}
-
-#productDetail > img:nth-child(2) {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 0 0 20px 20px;
-}
-
-#productDetail .product-info {
-    margin: 24px 24px 0 24px;
-}
-
-#productDetail .product-info p:nth-child(1) {
-    font-weight: bold;
-    font-size: var(--md);
-    margin-top: 0;
-    margin-bottom: 4px;
-}
-
-#productDetail .product-info p:nth-child(2) {
-    color: var(--very-light-pink);
-    font-size: var(--md);
-    margin-top: 0;
-    margin-bottom: 36px;
-}
-
-#productDetail .product-info p:nth-child(3) {
-    color: var(--very-light-pink);
-    font-size: var(--sm);
-    margin-top: 0;
-    margin-bottom: 36px;
-}
-
-.primary-button {
-    background-color: var(--hospital-green);
-    border-radius: 8px;
-    border: none;
-    color: var(--white);
-    width: 100%;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 50px;
-}
-
-.add-to-cart-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .navbar-shopping-cart {
     position: relative;
     cursor: pointer;
@@ -318,7 +250,7 @@ li{
 
   /*Aqui van los estilos de casilla usuario*/
 
-  .desktop-menu ul li a:hover{
+  .desktop-menu li a:hover{
     color: black;
     font-size: 1.6rem;
   }
@@ -341,7 +273,11 @@ li{
     font-weight: bold;
   }
   .desktop-menu ul li {
-    text-align: end;
+    text-align: initial;
+    width: 100%;
+  }
+  .desktop-menu li a{
+    width: 100%;
   }
   .desktop-menu ul li:last-child {
     padding-top: 20px;
@@ -368,6 +304,8 @@ li{
     height: 260px;
     top: 120px;
     padding: 24px;
+    left: 0;
+    width: 100%;
     overflow-y: scroll;
     scroll-behavior: smooth;
   }
@@ -375,7 +313,6 @@ li{
   .mobile-menu li a{
     display: flex;
     background-color: white;
-    width: 150px;
     border-radius: 30px;
     text-align: center;
     margin: 0.5rem;
@@ -412,16 +349,18 @@ li{
 
   /* aqui va el detalle de carrito compras */
 
-  .product-detail {
+aside {
     background: white;
-    top: 90px;
+    top: 80px;
     width: 360px;
-    height: 405px;
-    padding: 0 24px;
     box-sizing: border-box;
     position: fixed;
     right: 0;
   }
+  #shoppingCartContainer {
+    padding: 0 24px;
+  }
+
   .title-container {
     display: flex;
     padding: 1px 0;
@@ -491,6 +430,66 @@ li{
     height: 50px;
   }
 
+  /* Estilos Shopping Cart products detail */
+
+  .product-detail-close {
+    background: white;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+    padding: 12px;
+    border-radius: 50%;
+  }
+  .product-detail-close:hover {
+    cursor: pointer;
+  }
+  #productDetail > img:nth-child(2) {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+  }
+  #productDetail .product-info {
+    margin: 24px 24px 0 24px;
+  }
+  #productDetail .product-info p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  #productDetail .product-info p:nth-child(2) {
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+  #productDetail .product-info p:nth-child(3) {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+  .primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+  }
+  .add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 /* AQUI VAN LOD MEDIAS */
 
   @media (max-width: 640px) {
@@ -528,9 +527,6 @@ li{
       .desktop-menu {
           display: none;
       }
-      aside {
-          width: 100%;
-      }
       .cards-container {
           grid-template-columns: repeat(auto-fill, 140px);
       }
@@ -545,17 +541,25 @@ li{
         width: 100%;
         top: 130px;
       }
-}
+      aside {
+        width: 100%;
+        top: 120px;
+      }
+      .mobile-menu{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+    }
+    
+
 
   @media (min-width: 641px) {
-    .hambuerguesaMenu{
-        display: none;
-    }
-    .hambuerguesaMenu img{
-        display: none;
-    }
     .mobile-menu{
-        display: none;
+      display: none;
+    }
+    .hambuerguesaMenu{
+      display: none;
     }
   }
 
