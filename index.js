@@ -6,11 +6,13 @@ const menuCarritoIcon = document.querySelector(".navbar-shopping-cart");
 const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 const productDetailContainer = document.querySelector("#productDetail");
 const productDetailCloseIcon = document.querySelector(".product-detail-close");
+const agregarCarrito = document.querySelector('.add-to-cart-button');
 
 menuEmail.addEventListener("click",toggleDesktopMenu)
 menuHamIcon.addEventListener("click",toggleMobileMenu)
 menuCarritoIcon.addEventListener("click",toggleCarritoAside)
 productDetailCloseIcon.addEventListener("click",closeProductDetailAside)
+agregarCarrito.addEventListener('click', e => getItemsAside(e));
 
 function toggleDesktopMenu(){
     const isAsideClosed = shoppingCartContainer.classList.contains("inactive");
@@ -66,3 +68,12 @@ function closeProductDetailAside(){
     productDetailContainer.classList.add("inactive");
 }
 
+// FORMULAS PARA COMPRA //
+
+function getItemsAside(e){//realiza misma accion que agregarCompra()
+    const containerAside = e.target.parentElement.parentElement;
+    let id = containerAside.children[2].children[3].getAttribute('value');
+    addShoppingAside(containerAside,id);
+}
+
+console.log(getItemsAside);
